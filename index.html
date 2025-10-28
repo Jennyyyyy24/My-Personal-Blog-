@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>My Personal Blog ˚₊‧♡‧₊˚</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --pink:#f7d8df;
+      --accent:#e9aebc;
+      --brown:#b28c86;
+      --ivory:#fffafc;
+      --card:#fffdfc;
+      --muted:#7a5e59;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-family:"Quicksand",system-ui,Segoe UI,Arial;
+      background: linear-gradient(180deg, var(--ivory), #fff5f7 60%);
+      color:var(--muted);
+      padding:28px;
+    }
+
+    .cover {
+      width:100%;
+      max-width:920px;
+      border-radius:18px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(247,216,223,0.6));
+      padding:36px;
+      box-shadow: 0 14px 30px rgba(160,120,130,0.12);
+      border:1px solid rgba(178,140,134,0.07);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .top-deco {
+      display:flex;
+      gap:20px;
+      align-items:center;
+    }
+    .logo {
+      width:110px;
+      height:110px;
+      border-radius:16px;
+      background:linear-gradient(135deg,var(--pink),#fff0f3);
+      border:2px solid rgba(178,140,134,0.12);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-family:"Playfair Display";
+      font-size:40px;
+      color:var(--brown);
+      box-shadow: 0 6px 12px rgba(178,140,134,0.06);
+    }
+
+    h1 {
+      margin:0;
+      font-family:"Playfair Display";
+      color:var(--brown);
+      font-size:30px;
+      letter-spacing:1px;
+    }
+    .subtitle {
+      margin-top:6px;
+      color:#8b6b6b;
+      font-size:14px;
+      line-height:1.4;
+    }
+
+    .quote {
+      margin-top:18px;
+      padding:14px 18px;
+      background:linear-gradient(90deg, rgba(255,255,255,0.6), rgba(247,216,223,0.3));
+      border-radius:12px;
+      border:1px dashed rgba(178,140,134,0.12);
+      color:#6f5652;
+      font-size:14px;
+    }
+
+    .open-btn {
+      display:inline-block;
+      margin-top:22px;
+      background: linear-gradient(90deg, #f4aec0, #ec8aa6);
+      color:white;
+      border:none;
+      padding:12px 22px;
+      border-radius:30px;
+      font-weight:600;
+      cursor:pointer;
+      font-family:"Quicksand";
+      box-shadow: 0 8px 18px rgba(236,72,153,0.12);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .open-btn:hover{ transform:translateY(-4px); box-shadow:0 14px 24px rgba(236,72,153,0.14); }
+
+    /* lace footer */
+    .lace {
+      position:absolute;
+      left:0; right:0; bottom:-12px;
+      height:38px;
+      background:
+        radial-gradient(circle at 10px 10px, rgba(178,140,134,0.12) 6px, transparent 7px),
+        repeating-linear-gradient(90deg, rgba(178,140,134,0.08) 0 8px, transparent 8px 16px);
+      mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      border-radius:0 0 18px 18px;
+      transform:translateY(6px);
+      opacity:.95;
+    }
+
+    .small-deco {
+      margin-top:14px;
+      display:flex;
+      gap:10px;
+      align-items:center;
+      font-size:13px;
+      color:#8a6b6b;
+    }
+
+    /* sparkle */
+    .sparkle {
+      position:absolute;
+      width:8px; height:8px;
+      background:linear-gradient(45deg,#ffeaf0,#ffdce6);
+      border-radius:2px;
+      opacity:.9;
+      transform:rotate(15deg);
+      box-shadow:0 2px 6px rgba(233,174,184,0.25);
+      animation: float 6s linear infinite;
+    }
+    @keyframes float { 0%{transform:translateY(0) rotate(10deg)}50%{transform:translateY(-20px) rotate(-10deg)}100%{transform:translateY(0) rotate(10deg)} }
+
+    /* responsive */
+    @media (max-width:760px){
+      .top-deco{flex-direction:column; align-items:flex-start}
+      .logo{width:86px;height:86px;font-size:32px}
+    }
+  </style>
+</head>
+<body>
+  <div class="cover" role="main" aria-label="MyLearning Diary cover">
+    <div class="top-deco">
+      <div class="logo">✧</div>
+      <div>
+        <h1>My Personal Blog ˚₊‧♡‧₊˚</h1>
+        <div class="subtitle">a gentle space to note your thoughts, track your moods & breathe between study hours.</div>
+        <div class="small-deco">✧ soft pages • ✧ subtle routines • ✧ tiny joyful notes</div>
+      </div>
+    </div>
+
+    <div class="quote">“let your days bloom, one quiet page at a time. ࿐✧”</div>
+
+    <button class="open-btn" id="enterBtn">enter ˚₊‧୨♡୧‧₊˚</button>
+
+    <div class="lace" aria-hidden="true"></div>
+
+    <!-- decorative sparkles (random positions) -->
+    <div class="sparkle" style="left:18%; top:10%; animation-delay:0s;"></div>
+    <div class="sparkle" style="left:78%; top:8%; animation-delay:1.6s;"></div>
+    <div class="sparkle" style="left:42%; top:24%; animation-delay:.7s;"></div>
+    <div class="sparkle" style="left:62%; top:58%; animation-delay:2.2s;"></div>
+  </div>
+
+  <script>
+    document.getElementById('enterBtn').addEventListener('click', () => {
+      window.location.href = 'dashboard.html';
+    });
+  </script>
+</body>
+</html>
