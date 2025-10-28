@@ -10,4 +10,4 @@ Technically, My Personal Blog is built using HTML, CSS, and JavaScript, with all
 
 This project is a small reminder that technology can comfort, too — by giving children a quiet place to express their thoughts, track their progress, and remind themselves that healing isn’t just physical, but emotional too.
 
-# My Personal Blog — built with love, for little hearts that dream big even on their hardest days.
+My Personal Blog — built with love, for little hearts that dream big even on their hardest days.
